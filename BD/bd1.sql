@@ -75,6 +75,10 @@ INSERT INTO Livro_Emprestimo(Codigo_Emprestimo, Codigo_Livro) VALUES
 6) delete from Esprestimo where Matricula_Usuario = Select(Matricula from Usuario where Nome = Bruno Costa)
 7) delete from Livro_Emprestimo where codigo_Livro = Select(codigo from Emprestimo where Data_Hora = '22 /05 / 2025')
 8) Update Emprestimo Data_Devolucao='22/05/2025' where Data_Devolucao='10/05/2025'
-9)
+
+9) Select  Codigo,Titulo,Autor,Codigo_Sessao From Livro InnerJoin  Sessao where Livro.Codigo_Sesao=Sessao.Codigo And Sessao.Descricao ='banco de Dados' OR Sessao.Descricao ='Algoritmos' OR Sessao.Descricao ='Estrutura de Dados'
+9.1) Select  Codigo,Titulo,Autor,Codigo_Sessao From Livro InnerJoin  Sessao where Livro.Codigo_Sesao IN (Sessao.Codigo) And Sessao.Descricao IN('banco de Dados','Algoritmos','Estrutura de Dados')
+
+
 10) Select Nome from Usuarios,Emprestimo where Matricula=Matricula_Usuario and  Data_Hora Between 01/05/2025 and 31/05/2025
 11)Select Autor* from Usuarios,Emprestimo,Livro_Emprestimo where  Titulo Like '%Python%'
