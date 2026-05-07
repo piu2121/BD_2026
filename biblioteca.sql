@@ -1,10 +1,4 @@
 
-drop table usuario
-drop table Sessao
-drop table Livro
-drop table Emprestimo
-drop table Livro_Emprestimo
-
 CREATE TABLE Usuario(
     Matricula integer PRIMARY KEY,
     Nome Varchar(100) NOT NULL,
